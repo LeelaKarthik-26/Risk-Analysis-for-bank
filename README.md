@@ -1,84 +1,112 @@
-# 🏦 Risk Analysis for Bank
 
-This project analyzes customer credit risk for a bank using Python and Power BI. It includes cleaning data, exploring trends, building a basic risk model, and visualizing insights in an interactive dashboard.
+# 🏦 Banking Data Analysis and Dashboard Project
 
----
+## 📌 Project Overview
 
-## 📁 Files in this repo
+This project provides a comprehensive analysis and visualization of customer banking data using:
+- **Python (Pandas, Matplotlib, Seaborn)** for exploratory data analysis (EDA)
+- **Power BI** for interactive dashboards
 
-| File | Description |
-|------|-------------|
-| `Bank_total_data.csv` / `.xlsx` | Original dataset |
-| `banking_EDA_colab.ipynb` | Python notebook with data cleaning and analysis |
-| `Banking Dashboard New.pbix` | Final Power BI dashboard |
-| `bank Analysis Dashboard(OLD).pbix` | Previous version of dashboard |
+It is designed to help stakeholders understand customer behaviors, financial product usage, and demographic patterns that can drive data-driven decisions in the banking sector.
 
 ---
 
-## ✅ Goals
+## 📁 Project Structure
 
-1. Find patterns in customer risk levels
-2. Identify key factors that lead to default
-3. Show results using clear visuals and filters
-
----
-
-## 📊 Data Overview
-
-| Column | Description |
-|--------|-------------|
-| Customer_ID | Unique ID per person |
-| Age | Customer age |
-| Income | Annual income |
-| Loan_Amount | Current loan balance |
-| Credit_Score | Credit score (300–850) |
-| Default_Flag | 1 = defaulted, 0 = good customer |
-
-More details are available in the notebook.
-
----
-
-## 🔍 Steps Followed
-
-1. Cleaned and formatted the data
-2. Created new columns like debt-to-income ratio
-3. Used simple machine learning to group risk levels
-4. Built a Power BI report to explore the findings
-
----
-
-## 🚀 How to Use
-
-1. Clone the repo:
-```bash
-git clone https://github.com/LeelaKarthik-26/Risk-Analysis-for-bank
 ```
-2. Open the notebook `banking_EDA_colab.ipynb` in Google Colab or Jupyter
-3. Run all cells to see the analysis
-4. Open the `.pbix` file in Power BI Desktop to view the dashboard
+📦 Banking-Data-Analysis/
+│
+├── 📊 Banking Dashboard(you).pbix       # Power BI Dashboard for visual insights
+├── 📓 banking_EDA_colab.ipynb           # Jupyter Notebook for EDA
+├── 📄 Bank_total_data.csv               # Main dataset
+└── 📘 README.md                          # Project documentation (this file)
+```
 
 ---
 
-## 🧰 Tools Used
+## 📊 Power BI Dashboard Highlights
 
-- Python (pandas, matplotlib, seaborn, scikit-learn, xgboost)
-- Google Colab
-- Power BI Desktop
+- Customer age distribution
+- Credit card usage by demographics
+- Product holdings (loan, deposit, insurance)
+- Relationship between job type and product subscription
+- Regional differences in banking behavior
 
----
-
-## 📌 Results (Summary)
-
-- The model can predict risk fairly well (AUC ~ 0.87)
-- Around 11% of customers are high risk
-- Main factors: Credit Score, Income, Loan Amount, Tenure
+> **File**: `Banking Dashboard(you).pbix`
 
 ---
 
-## 🤝 Feedback & Contributions
+## 📈 Exploratory Data Analysis (Python)
 
-Feel free to open issues or pull requests with ideas or improvements!
+Performed using `pandas`, `seaborn`, and `matplotlib`. Key steps include:
+
+- Data cleaning: handling missing values and duplicates
+- Univariate and bivariate analysis
+- Correlation heatmaps
+- Insights on:
+  - Job-wise product usage
+  - Age vs. balance trends
+  - Marital status and product adoption
+
+> **File**: `banking_EDA_colab.ipynb`
 
 ---
 
-*Made by Leela Karthik*
+## 🧾 Dataset Description
+
+> **File**: `Bank_total_data.csv`
+
+Each row represents a customer with features like:
+
+| Column Name        | Description                                  |
+|--------------------|----------------------------------------------|
+| `age`              | Age of the customer                          |
+| `job`              | Type of occupation                           |
+| `marital`          | Marital status                               |
+| `education`        | Educational background                       |
+| `default`          | Whether the customer has credit in default   |
+| `balance`          | Account balance                              |
+| `housing`          | Has a housing loan                           |
+| `loan`             | Has a personal loan                          |
+| `contact`          | Contact communication type                   |
+| `pdays`, `previous`| Campaign-related indicators                  |
+| `poutcome`         | Outcome of the previous marketing campaign   |
+
+---
+
+## 🚀 How to Run
+
+### 1. Explore EDA
+
+Open the `banking_EDA_colab.ipynb` in Google Colab or Jupyter:
+
+```bash
+pip install pandas matplotlib seaborn
+```
+
+Then run all cells to view insights.
+
+### 2. View Dashboard
+
+Open `Banking Dashboard(you).pbix` using Power BI Desktop (Windows only). You can interact with slicers and visuals for dynamic insights.
+
+---
+
+## 📌 Key Insights
+
+- Customers aged 30–40 are most engaged in credit card and deposit services.
+- Unmarried individuals are more likely to hold multiple financial products.
+- Job type has a significant impact on loan uptake.
+- Customers contacted via cellular are more responsive than those via telephone.
+
+---
+
+## 🤝 Contributions
+
+Feel free to fork the repo, suggest improvements, or open issues!
+
+---
+
+## 📬 Contact
+
+For queries, reach out to **Devisetty Leelakarthik** via GitHub or email.
